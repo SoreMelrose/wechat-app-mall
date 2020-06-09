@@ -32,7 +32,7 @@
   <view class="space"></view>
   <navigator url="/pages/order-list/index">
     <view class="menu-item">
-      <view class="l">我的订单</view>
+      <view class="l">我的课程</view>
       <image class="next" src="/images/icon/next.png"></image>
     </view>
   </navigator>
@@ -47,12 +47,12 @@
     <view class='item' bindtap='goOrder' data-type="1">
       <view wx:if="{{count_id_no_transfer !== 0}}" class='dot'>{{count_id_no_transfer}}</view>
       <image class="icon" src="/images/order/fahuo.png" background-size="cover"></image>
-      <view class='text'>待发货</view>
+      <view class='text'>待上课</view>
     </view>
     <view class='item' bindtap='goOrder' data-type="2">
       <view wx:if="{{count_id_no_confirm !== 0}}" class='dot'>{{count_id_no_confirm}}</view>
       <image class="icon" src="/images/order/shouhuo.png" background-size="cover"></image>
-      <view class='text'>待收货</view>
+      <view class='text'>正在开课</view>
     </view>
     <view class='item' bindtap='goOrder' data-type="3">
       <view wx:if="{{count_id_no_reputation !== 0}}" class='dot'>{{count_id_no_reputation}}</view>
@@ -70,7 +70,7 @@
     <image class="next" src="/images/icon/next.png"></image>
   </view>
   <view class="line"></view>
-  <navigator url="/pages/maidan/index">
+  <!-- <navigator url="/pages/maidan/index">
     <view class="menu-item">
       <view class="l">优惠买单</view>
       <image class="next" src="/images/icon/next.png"></image>
@@ -82,7 +82,7 @@
       <view class="l">资金明细</view>
       <image class="next" src="/images/icon/next.png"></image>
     </view>
-  </navigator>
+  </navigator> -->
   <view class="line"></view>
   <!-- flex布局的新菜单 -->
   <!-- <view class="menu-item">
@@ -102,7 +102,7 @@
   </view> -->
 
   <view class="space"></view>
-  <navigator wx:if="{{!apiUserInfoMap.base.isSeller}}" url="/pages/fx/apply-status">
+  <!-- <navigator wx:if="{{!apiUserInfoMap.base.isSeller}}" url="/pages/fx/apply-status">
     <view class="menu-item">
       <view class="l">成为分销商</view>
       <image class="next" src="/images/icon/next.png"></image>
@@ -113,7 +113,7 @@
       <view class="l">分销中心</view>
       <image class="next" src="/images/icon/next.png"></image>
     </view>
-  </navigator>
+  </navigator> -->
   <view wx:if="{{apiUserInfoMap.base.isSeller}}" class="line"></view>
   <navigator wx:if="{{apiUserInfoMap.base.isSeller}}" url="/pages/fx/members">
     <view class="menu-item">
@@ -129,7 +129,7 @@
     </view>
   </navigator>
 
-  <view class="space"></view>
+  <!-- <view class="space"></view>
   <navigator url="/pages/invoice/apply">
     <view class="menu-item">
       <view class="l">申请发票</view>
@@ -142,12 +142,26 @@
       <view class="l">发票记录</view>
       <image class="next" src="/images/icon/next.png"></image>
     </view>
-  </navigator>
+  </navigator> -->
 
-  <view class="space"></view>
+  <!-- <view class="space"></view>
   <navigator url="/pages/select-address/index">
     <view class="menu-item">
       <view class="l">收货地址</view>
+      <image class="next" src="/images/icon/next.png"></image>
+    </view>
+  </navigator> -->
+    <view class="line"></view>
+  <navigator url="/pages/coupons/index">
+    <view class="menu-item">
+      <view class="l">我的活动</view>
+      <image class="next" src="/images/icon/next.png"></image>
+    </view>
+  </navigator>
+    <view class="line"></view>
+  <navigator url="/pages/coupons/index">
+    <view class="menu-item">
+      <view class="l">我的作业</view>
       <image class="next" src="/images/icon/next.png"></image>
     </view>
   </navigator>
@@ -173,7 +187,7 @@
       <image class="next" src="/images/icon/next.png"></image>
     </view>
   </navigator>
-  <view class="line"></view>
+  <!-- <view class="line"></view>
   <navigator url="/pages/score-excharge/index">
     <view class="menu-item">
       <view class="l">积分卷兑换积分</view>
@@ -186,7 +200,7 @@
       <view class="l">积分兑换成长值</view>
       <image class="next" src="/images/icon/next.png"></image>
     </view>
-  </navigator>
+  </navigator> -->
   <view class="line"></view>
 
   <view class="space"></view>
@@ -224,9 +238,7 @@
     <image class="next" src="/images/icon/next.png"></image>
   </view> -->
 
-  <view class="space"></view>
-  <view class="version">EastWorld v {{version}}</view>
-  <view class="space"></view>
+
 </view>
 
 <template is="apifmLogin" data="{{wxlogin: wxlogin}}" />

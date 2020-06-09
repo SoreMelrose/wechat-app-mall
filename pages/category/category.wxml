@@ -12,7 +12,7 @@
     <scroll-view class="goods-container" scroll-y="true" scroll-top="{{scrolltop}}" wx:if='{{onLoadStatus}}'>
       <view wx:if="{{!currentGoods}}" class="no-data">
         <view class="line"></view>
-        <view class="txt">暂无商品</view>
+        <view class="txt">暂无课程</view>
         <view class="line"></view>
       </view>
       <block wx:for="{{categories}}" wx:key="id" wx:if="{{item.pid == categorySelected.id}}">
@@ -45,11 +45,11 @@
         </view>
         <view class='soldInfo'>
           <view class='good-sales-box'>
-            <text class="number">已售 {{item.numberSells}}件</text>
+            <text class="number">已报名 {{item.numberSells}}家</text>
             <text>评价 +{{item.gotScore}}积分</text>
           </view>
         </view>
-        <image data-id="{{item.id}}" bindtap="addShopCar" class="car" src="/images/icon/car.svg"></image>
+        <!-- <image data-id="{{item.id}}" bindtap="addShopCar" class="car" src="/images/icon/car.svg"></image> -->
       </view>
     </scroll-view>
   </view>

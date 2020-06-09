@@ -30,7 +30,7 @@
     </view>    
   </view>
   <view class="page__bd" wx:if="{{curGoodsKanjia}}" style='width:750rpx;'>
-    <view class="weui-cells__title">商品砍价设置</view>
+    <view class="weui-cells__title">课程砍价设置</view>
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
         <view class="weui-cell__bd">限量</view>
@@ -55,7 +55,7 @@
     </view>
   </view>
   <view class="page__bd" wx:if="{{pingtuanSet}}" style='width:750rpx;'>
-    <view class="weui-cells__title">商品拼团设置</view>
+    <view class="weui-cells__title">课程拼团设置</view>
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
         <view class="weui-cell__bd">已成团</view>
@@ -151,7 +151,7 @@
     <image src="/images/icon/next.png"></image>
   </view>
   <view class="size-label-box2" wx:if="{{goodsDetailSkuShowType==1}}">
-    <view class="label-title">选择商品规格</view>
+    <view class="label-title">选择课程规格</view>
     <view class="size-label-box">
       <block wx:for="{{goodsDetail.properties}}" wx:for-item="property" wx:for-index="idx" wx:key="id">
         <view class="label">{{property.name}}</view>
@@ -163,7 +163,7 @@
       </block>
     </view>
     <view class="buy-num-box">
-      <view class="num-label">购买数量</view>
+      <view class="num-label">报名数量</view>
       <view class="num-box">
         <view class="num-jian {{buyNumber == buyNumMin ? 'hui': ''}}" bindtap="numJianTap">-</view>
         <view class="num-input">
@@ -181,7 +181,7 @@
     </view>
   </view>
   <view class="goods-des-info">
-    <view class="label-title">商品介绍</view>
+    <view class="label-title">课程介绍</view>
     <view class="goods-text">
       <parser html="{{goodsDetail.content}}" />
     </view>
@@ -217,7 +217,7 @@
     </view>
   </view>
   <view class='kjBuyButton' wx:if="{{curGoodsKanjia}}">
-    <button class="weui-btn" type="warn" bindtap="tobuy">用当前价购买</button>
+    <button class="weui-btn" type="warn" bindtap="tobuy">用当前价报名</button>
   </view>
   <view wx:if="{{!curGoodsKanjia}}" class="footer-box">
     <view class="contact">
@@ -229,9 +229,9 @@
       <image src="/images/nav/cart-off.png"></image>
     </view>
     <image bindtap="addFav" class="fav-icon" src="/images/icon/fav{{faved?'1':'0'}}.svg"></image>
-    <view wx:if="{{!goodsDetail.basicInfo.pingtuan}}" class="join-shop-cart" bindtap="{{goodsDetailSkuShowType==0?'toAddShopCar':'addShopCar'}}">加入购物车</view>
-    <view wx:if="{{!goodsDetail.basicInfo.pingtuan}}" class="now-buy"  data-shopType="{{shopType}}" bindtap="{{goodsDetailSkuShowType==0?'tobuy':'buyNow'}}">立即购买</view>
-    <view wx:if="{{goodsDetail.basicInfo.pingtuan}}" class="join-shop-cart" bindtap="tobuy">单独购买</view>
+    <!-- <view wx:if="{{!goodsDetail.basicInfo.pingtuan}}" class="join-shop-cart" bindtap="{{goodsDetailSkuShowType==0?'toAddShopCar':'addShopCar'}}">加入购物车</view> -->
+    <view wx:if="{{!goodsDetail.basicInfo.pingtuan}}" class="now-buy"  data-shopType="{{shopType}}" bindtap="{{goodsDetailSkuShowType==0?'tobuy':'buyNow'}}">立即报名</view>
+    <view wx:if="{{goodsDetail.basicInfo.pingtuan}}" class="join-shop-cart" bindtap="tobuy">单独报名</view>   
     <view wx:if="{{goodsDetail.basicInfo.pingtuan}}" class="now-buy" bindtap="toPingtuan">发起拼团</view>
   </view>
   <view class="show-popup" hidden="{{hideShopPopup}}" catchtouchmove="true">
@@ -261,7 +261,7 @@
         </block>
       </view>
       <view class="buy-num-box">
-        <view class="num-label">购买数量</view>
+        <view class="num-label">报名数量</view>
         <view class="num-box">
           <view class="num-jian {{buyNumber == buyNumMin ? 'hui': ''}}" bindtap="numJianTap">-</view>
           <view class="num-input">
@@ -270,11 +270,11 @@
           <view class="num-jia {{buyNumber== buyNumMax ? 'hui': ''}}" bindtap="numJiaTap">+</view>
         </view>
       </view>
-      <view class="safeAreaOldPaddingBttom safeAreaNewPaddingBttom" wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar">
+      <!-- <view class="safeAreaOldPaddingBttom safeAreaNewPaddingBttom" wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar">
         <view class="popup-join-btn">加入购物车</view>
-      </view>
+      </view> -->
       <view class="safeAreaOldPaddingBttom safeAreaNewPaddingBttom" data-shopType="{{shopType}}" wx:if="{{shopType =='tobuy' || shopType =='toPingtuan'}}" bindtap="buyNow">
-        <view class="popup-join-btn">立即购买</view>
+        <view class="popup-join-btn">立即报名</view>
       </view>
     </view>
   </view>

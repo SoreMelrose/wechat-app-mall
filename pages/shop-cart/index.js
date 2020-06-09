@@ -146,7 +146,7 @@ Page({
     if (number <= 0) {
       // 弹出删除确认
       wx.showModal({
-        content: '确定要删除该商品吗？',
+        content: '确定要删除该课程吗？',
         success: (res) => {
           if (res.confirm) {
             this.delItemDone(item.key)

@@ -52,7 +52,7 @@
     </block>
   </view>
   <view class="goods-list">
-    <view class="list-title">商品信息</view>
+    <view class="list-title">课程信息</view>
     <form bindsubmit="submitReputation" report-submit="true">
       <block wx:for="{{orderDetail.goods}}" wx:key="{{index}}">
         <navigator url="/pages/goods-details/index?id={{item.goodsId}}">
@@ -96,7 +96,7 @@
   </view>
   <view class="goods-info">
     <view class="row-box">
-      <view class="row-label">商品金额</view>
+      <view class="row-label">课程金额</view>
       <view class="right-text">¥ {{orderDetail.orderInfo.amount}}</view>
     </view>
     <view class="row-box">

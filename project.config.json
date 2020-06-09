@@ -21,7 +21,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -64,14 +64,14 @@
 				},
 				{
 					"id": -1,
-					"name": "商品详情页面",
+					"name": "课程详情页面",
 					"pathName": "pages/goods-details/index",
 					"query": "id=134&inviter_id=456",
 					"scene": 1011
 				},
 				{
 					"id": -1,
-					"name": "商品详情页面",
+					"name": "课程详情页面",
 					"pathName": "pages/goods-details/index",
 					"query": "id= 6761",
 					"scene": null

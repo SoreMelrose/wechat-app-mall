@@ -29,7 +29,7 @@ Page({
   async onLoad(e) {
     // e.id = 235853
     if (e && e.scene) {
-      const scene = decodeURIComponent(e.scene) // 处理扫码进商品详情页面的逻辑
+      const scene = decodeURIComponent(e.scene) // 处理扫码进课程详情页面的逻辑
       if (scene && scene.split(',').length >= 2) {
         e.id = scene.split(',')[0]
         wx.setStorageSync('referrer', scene.split(',')[1])
@@ -159,7 +159,7 @@ Page({
         const pingtuanSetRes = await WXAPI.pingtuanSet(goodsId)
         if (pingtuanSetRes.code == 0) {
           _data.pingtuanSet = pingtuanSetRes.data
-          // 如果是拼团商品， 默认显示拼团价格
+          // 如果是拼团课程， 默认显示拼团价格
           _data.selectSizePrice = goodsDetailRes.data.basicInfo.pingtuanPrice
         }        
       }
@@ -245,7 +245,7 @@ Page({
     }
   },
   /**
-   * 选择商品规格
+   * 选择课程规格
    * @param {Object} e
    */
   async labelItemTap(e) {
@@ -380,7 +380,7 @@ Page({
       if (!this.data.canSubmit) {
         wx.showModal({
           title: '提示',
-          content: '请选择商品规格！',
+          content: '请选择课程规格！',
           showCancel: false
         })
       }
@@ -699,7 +699,7 @@ Page({
           {
             x: 133,
             y: 133,
-            url: _this.data.goodsDetail.basicInfo.pic, // 商品图片
+            url: _this.data.goodsDetail.basicInfo.pic, // 课程图片
             width: 490,
             height: picHeight
           },

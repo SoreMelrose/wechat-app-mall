@@ -41,7 +41,7 @@ page,view,image,input {
 }
 
 .category-container {
-  width: 180rpx;
+  width: 250rpx;
   height: 100%;
 }
 

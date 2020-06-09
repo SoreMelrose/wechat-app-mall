@@ -12,9 +12,9 @@ APP.configLoadOK = () => {
 Page({
   data: {
     inputVal: "", // 搜索框内容
-    goodsRecommend: [], // 推荐商品
-    kanjiaList: [], //砍价商品列表
-    pingtuanList: [], //拼团商品列表
+    goodsRecommend: [], // 推荐课程
+    kanjiaList: [], //砍价课程列表
+    pingtuanList: [], //拼团课程列表
 
     loadingHidden: false, // loading
     selectCurrent: 0,
@@ -255,7 +255,7 @@ Page({
     this.getGoodsList(this.data.activeCategoryId)
     wx.stopPullDownRefresh()
   },
-  // 获取砍价商品
+  // 获取砍价课程
   async kanjiaGoods(){
     const res = await WXAPI.goods({
       kanjia: true
@@ -289,7 +289,7 @@ Page({
       url: "/pages/coupons/index"
     })
   },
-  pingtuanGoods(){ // 获取团购商品列表
+  pingtuanGoods(){ // 获取团购课程列表
     const _this = this
     WXAPI.goods({
       pingtuan: true

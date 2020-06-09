@@ -17,7 +17,7 @@ Page({
     })
   },
   async goodsFavList() {
-    // 搜索商品
+    // 搜索课程
     wx.showLoading({
       title: '加载中',
     })

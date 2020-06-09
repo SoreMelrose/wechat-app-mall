@@ -36,7 +36,7 @@
     </view>
   </view>
 </view>
-<view class="weui-cells__tips">成为分销商后卖出商品，您可以获得佣金</view>
+<view class="weui-cells__tips">成为分销商后卖出课程，您可以获得佣金</view>
 <view class="weui-btn-area">
   <button class="weui-btn" type="primary" bindtap="bindSave">申请成为分销商</button>
 </view>

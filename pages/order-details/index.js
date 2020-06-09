@@ -48,7 +48,7 @@ Page({
       let that = this;
       let orderId = this.data.orderId;
       wx.showModal({
-          title: '确认您已收到商品？',
+          title: '确认您已收到课程？',
           content: '',
           success: function(res) {
             if (res.confirm) {

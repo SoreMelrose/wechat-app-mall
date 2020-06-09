@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listType: 1, // 1为1个商品一行，2为2个商品一行    
+    listType: 1, // 1为1个课程一行，2为2个课程一行    
     name: '', // 搜索关键词
     orderBy: '', // 排序规则
   },
@@ -36,7 +36,7 @@ Page({
 
   },
   async search(){
-    // 搜索商品
+    // 搜索课程
     wx.showLoading({
       title: '加载中',
     })

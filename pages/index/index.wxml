@@ -17,7 +17,7 @@
     </swiper-item>
   </swiper>
   <view class="search">
-    <input type="text" placeholder="输入搜索关键词" value="{{name}}" bindinput="bindinput" bindconfirm="bindconfirm"></input>
+    <input type="text" placeholder="输入搜索课程" value="{{name}}" bindinput="bindinput" bindconfirm="bindconfirm"></input>
     <image src="/images/icon/search.svg" bindtap="goSearch"></image>
   </view>
   <view wx:if="{{goodsDynamic}}" class="goodsDynamic">
@@ -171,7 +171,7 @@
 
   <view class='space'></view>
   <view class="weui-loadmore weui-loadmore_line">
-    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">商品列表</view>
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">课程列表</view>
   </view>
   <view class="goods-container">
     <view class="goods-box" wx:for="{{goods}}" wx:key="id" bindtap="toDetailsTap" data-id="{{item.id}}">

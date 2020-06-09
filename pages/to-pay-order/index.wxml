@@ -1,6 +1,6 @@
 <view class="container">
   <view class="goods-list">
-    <view class="list-title">商品列表</view>
+    <view class="list-title">课程列表</view>
     <view class="a-goods" wx:for="{{goodsList}}" wx:key="{{index}}">
       <view class="img-box">
         <image src="{{item.pic}}" class="img" />
@@ -71,7 +71,7 @@
 
   <view class="goods-info">
     <view class="row-box">
-      <view class="row-label">商品金额</view>
+      <view class="row-label">课程金额</view>
       <view class="right-text">¥ {{allGoodsPrice}}</view>
     </view>
     <view class="row-box" wx:if="{{isNeedLogistics > 0 && peisongType == 'kd'}}">
